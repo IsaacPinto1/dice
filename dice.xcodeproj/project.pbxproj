@@ -11,6 +11,7 @@
 		CC4D6F4029F3883400A31738 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4D6F3F29F3883400A31738 /* ContentView.swift */; };
 		CC4D6F4229F3883500A31738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4D6F4129F3883500A31738 /* Assets.xcassets */; };
 		CC4D6F4529F3883500A31738 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4D6F4429F3883500A31738 /* Preview Assets.xcassets */; };
+		CC4D6F4C29F3885100A31738 /* Dice-starter-assets in Resources */ = {isa = PBXBuildFile; fileRef = CC4D6F4B29F3885100A31738 /* Dice-starter-assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		CC4D6F3F29F3883400A31738 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CC4D6F4129F3883500A31738 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC4D6F4429F3883500A31738 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC4D6F4B29F3885100A31738 /* Dice-starter-assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Dice-starter-assets"; path = "../../../Downloads/Dice-starter-assets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 				CC4D6F3D29F3883400A31738 /* diceApp.swift */,
 				CC4D6F3F29F3883400A31738 /* ContentView.swift */,
 				CC4D6F4129F3883500A31738 /* Assets.xcassets */,
+				CC4D6F4B29F3885100A31738 /* Dice-starter-assets */,
 				CC4D6F4329F3883500A31738 /* Preview Content */,
 			);
 			path = dice;
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC4D6F4529F3883500A31738 /* Preview Assets.xcassets in Resources */,
+				CC4D6F4C29F3885100A31738 /* Dice-starter-assets in Resources */,
 				CC4D6F4229F3883500A31738 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
