@@ -21,8 +21,13 @@
 		CC755A2A29F4566A00A767F3 /* OrderInteract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A2929F4566A00A767F3 /* OrderInteract.swift */; };
 		CC755A3029F4587B00A767F3 /* Restaurant Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A2F29F4587B00A767F3 /* Restaurant Icon.swift */; };
 		CC755A3229F458FE00A767F3 /* Restaurant List.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A3129F458FE00A767F3 /* Restaurant List.swift */; };
-		CC755A3429F4598200A767F3 /* Restaurant Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A3329F4598200A767F3 /* Restaurant Menu.swift */; };
 		CC755A3629F459A700A767F3 /* Food Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A3529F459A700A767F3 /* Food Item.swift */; };
+		CCF83F2529F472EE006A6EEC /* B Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF83F2429F472EE006A6EEC /* B Cafe.swift */; };
+		CCF83F2729F47506006A6EEC /* The Study.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF83F2629F47506006A6EEC /* The Study.swift */; };
+		CCF83F2929F475C6006A6EEC /* Rendez.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF83F2829F475C6006A6EEC /* Rendez.swift */; };
+		CCF83F2D29F47869006A6EEC /* The Cuban.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF83F2C29F47869006A6EEC /* The Cuban.swift */; };
+		CCF83F3229F47A33006A6EEC /* Bowl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF83F3129F47A33006A6EEC /* Bowl.swift */; };
+		CCF83F3629F47CD8006A6EEC /* Sandwich.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF83F3529F47CD8006A6EEC /* Sandwich.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +46,13 @@
 		CC755A2929F4566A00A767F3 /* OrderInteract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInteract.swift; sourceTree = "<group>"; };
 		CC755A2F29F4587B00A767F3 /* Restaurant Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant Icon.swift"; sourceTree = "<group>"; };
 		CC755A3129F458FE00A767F3 /* Restaurant List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant List.swift"; sourceTree = "<group>"; };
-		CC755A3329F4598200A767F3 /* Restaurant Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant Menu.swift"; sourceTree = "<group>"; };
 		CC755A3529F459A700A767F3 /* Food Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food Item.swift"; sourceTree = "<group>"; };
+		CCF83F2429F472EE006A6EEC /* B Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "B Cafe.swift"; sourceTree = "<group>"; };
+		CCF83F2629F47506006A6EEC /* The Study.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "The Study.swift"; sourceTree = "<group>"; };
+		CCF83F2829F475C6006A6EEC /* Rendez.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rendez.swift; sourceTree = "<group>"; };
+		CCF83F2C29F47869006A6EEC /* The Cuban.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "The Cuban.swift"; sourceTree = "<group>"; };
+		CCF83F3129F47A33006A6EEC /* Bowl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bowl.swift; sourceTree = "<group>"; };
+		CCF83F3529F47CD8006A6EEC /* Sandwich.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sandwich.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,10 +131,71 @@
 			children = (
 				CC755A3129F458FE00A767F3 /* Restaurant List.swift */,
 				CC755A2F29F4587B00A767F3 /* Restaurant Icon.swift */,
-				CC755A3329F4598200A767F3 /* Restaurant Menu.swift */,
+				CCF83F2329F472DE006A6EEC /* Menus */,
 				CC755A3529F459A700A767F3 /* Food Item.swift */,
 			);
 			path = "Make Order";
+			sourceTree = "<group>";
+		};
+		CCF83F2329F472DE006A6EEC /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				CCF83F2F29F47A19006A6EEC /* Rendez */,
+				CCF83F2A29F47851006A6EEC /* B Cafe */,
+				CCF83F3329F47CC6006A6EEC /* The Study */,
+			);
+			path = Menus;
+			sourceTree = "<group>";
+		};
+		CCF83F2A29F47851006A6EEC /* B Cafe */ = {
+			isa = PBXGroup;
+			children = (
+				CCF83F2429F472EE006A6EEC /* B Cafe.swift */,
+				CCF83F2B29F4785C006A6EEC /* Food */,
+			);
+			path = "B Cafe";
+			sourceTree = "<group>";
+		};
+		CCF83F2B29F4785C006A6EEC /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				CCF83F2C29F47869006A6EEC /* The Cuban.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		CCF83F2F29F47A19006A6EEC /* Rendez */ = {
+			isa = PBXGroup;
+			children = (
+				CCF83F2829F475C6006A6EEC /* Rendez.swift */,
+				CCF83F3029F47A28006A6EEC /* Food */,
+			);
+			path = Rendez;
+			sourceTree = "<group>";
+		};
+		CCF83F3029F47A28006A6EEC /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				CCF83F3129F47A33006A6EEC /* Bowl.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		CCF83F3329F47CC6006A6EEC /* The Study */ = {
+			isa = PBXGroup;
+			children = (
+				CCF83F2629F47506006A6EEC /* The Study.swift */,
+				CCF83F3429F47CCE006A6EEC /* Food */,
+			);
+			path = "The Study";
+			sourceTree = "<group>";
+		};
+		CCF83F3429F47CCE006A6EEC /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				CCF83F3529F47CD8006A6EEC /* Sandwich.swift */,
+			);
+			path = Food;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,17 +271,22 @@
 			files = (
 				CC4D6F4029F3883400A31738 /* ContentView.swift in Sources */,
 				CC755A1F29F4438500A767F3 /* Profile.swift in Sources */,
+				CCF83F2729F47506006A6EEC /* The Study.swift in Sources */,
 				CC755A2A29F4566A00A767F3 /* OrderInteract.swift in Sources */,
+				CCF83F2D29F47869006A6EEC /* The Cuban.swift in Sources */,
 				CC755A2129F44E5D00A767F3 /* DeliverPage.swift in Sources */,
+				CCF83F2929F475C6006A6EEC /* Rendez.swift in Sources */,
 				CC755A3029F4587B00A767F3 /* Restaurant Icon.swift in Sources */,
+				CCF83F3629F47CD8006A6EEC /* Sandwich.swift in Sources */,
 				CC4D6F3E29F3883400A31738 /* diceApp.swift in Sources */,
-				CC755A3429F4598200A767F3 /* Restaurant Menu.swift in Sources */,
 				CC755A1B29F436A000A767F3 /* LogIn.swift in Sources */,
 				CC755A2529F450F600A767F3 /* OrderData.swift in Sources */,
 				CC755A1D29F437A600A767F3 /* SignInBottom.swift in Sources */,
 				CC755A2329F44F1600A767F3 /* Order.swift in Sources */,
 				CC755A3229F458FE00A767F3 /* Restaurant List.swift in Sources */,
+				CCF83F2529F472EE006A6EEC /* B Cafe.swift in Sources */,
 				CC755A3629F459A700A767F3 /* Food Item.swift in Sources */,
+				CCF83F3229F47A33006A6EEC /* Bowl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

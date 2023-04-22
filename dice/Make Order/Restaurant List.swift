@@ -10,15 +10,22 @@ import SwiftUI
 struct Restaurant_List: View {
     var body: some View {
         VStack{
+            Text("Choose a Restaurant: ")
+                .padding(.leading, 11.0)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .font(.system(size:36))
+            Divider()
+            Spacer()
             HStack{
-                Restaurant_Icon()
-                Restaurant_Icon()
+                Restaurant_Icon(image:"the-study", name: "The Study")
+                    .padding(.trailing, 50)
+                Restaurant_Icon(image:"rendez", name: "Rendezvous West")
             }
-                .padding(.bottom, 100.0)
+                .padding(.bottom, 50.0)
             HStack{
-                Restaurant_Icon()
-                Restaurant_Icon()
+                Restaurant_Icon(image:"bcafe", name: "Bruin Cafe")
             }
+            Spacer()
         }
     }
 }
