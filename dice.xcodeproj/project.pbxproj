@@ -12,6 +12,8 @@
 		CC4D6F4229F3883500A31738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4D6F4129F3883500A31738 /* Assets.xcassets */; };
 		CC4D6F4529F3883500A31738 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4D6F4429F3883500A31738 /* Preview Assets.xcassets */; };
 		CC755A1729F3D5EE00A767F3 /* Dice-starter-assets in Resources */ = {isa = PBXBuildFile; fileRef = CC755A1629F3D5EE00A767F3 /* Dice-starter-assets */; };
+		CC755A1B29F436A000A767F3 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A1A29F436A000A767F3 /* LogIn.swift */; };
+		CC755A1D29F437A600A767F3 /* SignInBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A1C29F437A600A767F3 /* SignInBottom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		CC4D6F4129F3883500A31738 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC4D6F4429F3883500A31738 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC755A1629F3D5EE00A767F3 /* Dice-starter-assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Dice-starter-assets"; sourceTree = "<group>"; };
+		CC755A1A29F436A000A767F3 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
+		CC755A1C29F437A600A767F3 /* SignInBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInBottom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			children = (
 				CC4D6F3D29F3883400A31738 /* diceApp.swift */,
 				CC4D6F3F29F3883400A31738 /* ContentView.swift */,
+				CC755A1C29F437A600A767F3 /* SignInBottom.swift */,
+				CC755A1A29F436A000A767F3 /* LogIn.swift */,
 				CC755A1629F3D5EE00A767F3 /* Dice-starter-assets */,
 				CC4D6F4129F3883500A31738 /* Assets.xcassets */,
 				CC4D6F4329F3883500A31738 /* Preview Content */,
@@ -143,6 +149,8 @@
 			files = (
 				CC4D6F4029F3883400A31738 /* ContentView.swift in Sources */,
 				CC4D6F3E29F3883400A31738 /* diceApp.swift in Sources */,
+				CC755A1B29F436A000A767F3 /* LogIn.swift in Sources */,
+				CC755A1D29F437A600A767F3 /* SignInBottom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

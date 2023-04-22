@@ -9,15 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var isVisible = false
+    @State var SignedIn = "Sign In"
     
     func changeSignIn(){
-        isVisible = true
+        SignedIn = "Home"
     }
     
     
     var body: some View {
-            if isVisible == true {
+        switch SignedIn {
+        case "Sign In":
+            VStack{
+                SignIn(SignedIn: $SignedIn)
+            }
+        case "Home":
                 TabView{
                     SecondView()
                         .tabItem{
@@ -28,22 +33,26 @@ struct ContentView: View {
                             Label("Third", systemImage: "tray.and.arrow.down.fill")
                         }
                 }
-            } else {
-                VStack{
-                    SignIn()
-                }
-            }
+        case "Create Account":
+            LogIn(SignedIn: $SignedIn)
+        default:
+            Text("Shit")
         
+    }
     }
 }
 
 struct SignIn: View{
+    
+    @Binding var SignedIn: String
+    
     var body: some View{
-        ZStack{
-            Color.green
+        VStack{
+            Rectangle()
+                .fill(.green)
                 .ignoresSafeArea()
-            RoundedRectangle(cornerRadius: 20)
-                .fill(.white)
+            SignInBottom(SignedIn: $SignedIn)
+                .offset(y: -60)
         }
     }
 }
