@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @State private var isVisible = false
     
-    func SignIn(){
+    func changeSignIn(){
         isVisible = true
     }
     
@@ -29,15 +29,22 @@ struct ContentView: View {
                         }
                 }
             } else {
-                VStack {
-                    Text("Not Signed in!")
-                    Button("Sign in") {
-                        SignIn()
-                    }
+                VStack{
+                    SignIn()
                 }
-                
             }
         
+    }
+}
+
+struct SignIn: View{
+    var body: some View{
+        ZStack{
+            Color.green
+                .ignoresSafeArea()
+            RoundedRectangle(cornerRadius: 20)
+                .fill(.white)
+        }
     }
 }
 
@@ -80,14 +87,20 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
+//API STUFF:
+
+
 /*import Foundation
 import SwiftUI
 struct ContentView: View {
-    @State private var joke = Current
+    @State var currentWeather: CurrentWeather?
     
     
     var body: some View {
-        Text("Hello")
+        if let weather = currentWeather {
+                        Text("\(weather.temperature)")
+                        Text("\(weather.windspeed)")
+                    }
         Button{
             Task {
                 let url = URL(string: "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m")!
@@ -99,6 +112,7 @@ struct ContentView: View {
                     do {
                         let current = try JSONDecoder().decode(Current.self, from: data)
                         print(current.currentWeather.temperature)
+                        currentWeather = current.currentWeather
                     } catch {
                         print("Error decoding JSON: \(error)")
                     }
