@@ -14,6 +14,15 @@
 		CC755A1729F3D5EE00A767F3 /* Dice-starter-assets in Resources */ = {isa = PBXBuildFile; fileRef = CC755A1629F3D5EE00A767F3 /* Dice-starter-assets */; };
 		CC755A1B29F436A000A767F3 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A1A29F436A000A767F3 /* LogIn.swift */; };
 		CC755A1D29F437A600A767F3 /* SignInBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A1C29F437A600A767F3 /* SignInBottom.swift */; };
+		CC755A1F29F4438500A767F3 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A1E29F4438500A767F3 /* Profile.swift */; };
+		CC755A2129F44E5D00A767F3 /* DeliverPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A2029F44E5D00A767F3 /* DeliverPage.swift */; };
+		CC755A2329F44F1600A767F3 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A2229F44F1600A767F3 /* Order.swift */; };
+		CC755A2529F450F600A767F3 /* OrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A2429F450F600A767F3 /* OrderData.swift */; };
+		CC755A2A29F4566A00A767F3 /* OrderInteract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A2929F4566A00A767F3 /* OrderInteract.swift */; };
+		CC755A3029F4587B00A767F3 /* Restaurant Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A2F29F4587B00A767F3 /* Restaurant Icon.swift */; };
+		CC755A3229F458FE00A767F3 /* Restaurant List.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A3129F458FE00A767F3 /* Restaurant List.swift */; };
+		CC755A3429F4598200A767F3 /* Restaurant Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A3329F4598200A767F3 /* Restaurant Menu.swift */; };
+		CC755A3629F459A700A767F3 /* Food Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A3529F459A700A767F3 /* Food Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +34,15 @@
 		CC755A1629F3D5EE00A767F3 /* Dice-starter-assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Dice-starter-assets"; sourceTree = "<group>"; };
 		CC755A1A29F436A000A767F3 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		CC755A1C29F437A600A767F3 /* SignInBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInBottom.swift; sourceTree = "<group>"; };
+		CC755A1E29F4438500A767F3 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		CC755A2029F44E5D00A767F3 /* DeliverPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverPage.swift; sourceTree = "<group>"; };
+		CC755A2229F44F1600A767F3 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		CC755A2429F450F600A767F3 /* OrderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderData.swift; sourceTree = "<group>"; };
+		CC755A2929F4566A00A767F3 /* OrderInteract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInteract.swift; sourceTree = "<group>"; };
+		CC755A2F29F4587B00A767F3 /* Restaurant Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant Icon.swift"; sourceTree = "<group>"; };
+		CC755A3129F458FE00A767F3 /* Restaurant List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant List.swift"; sourceTree = "<group>"; };
+		CC755A3329F4598200A767F3 /* Restaurant Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant Menu.swift"; sourceTree = "<group>"; };
+		CC755A3529F459A700A767F3 /* Food Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food Item.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +76,11 @@
 			isa = PBXGroup;
 			children = (
 				CC4D6F3D29F3883400A31738 /* diceApp.swift */,
+				CC755A2829F4563F00A767F3 /* Sign In */,
+				CC755A2629F4562000A767F3 /* Orders Page */,
+				CC755A2C29F457BC00A767F3 /* Make Order */,
 				CC4D6F3F29F3883400A31738 /* ContentView.swift */,
-				CC755A1C29F437A600A767F3 /* SignInBottom.swift */,
-				CC755A1A29F436A000A767F3 /* LogIn.swift */,
+				CC755A1E29F4438500A767F3 /* Profile.swift */,
 				CC755A1629F3D5EE00A767F3 /* Dice-starter-assets */,
 				CC4D6F4129F3883500A31738 /* Assets.xcassets */,
 				CC4D6F4329F3883500A31738 /* Preview Content */,
@@ -74,6 +94,37 @@
 				CC4D6F4429F3883500A31738 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC755A2629F4562000A767F3 /* Orders Page */ = {
+			isa = PBXGroup;
+			children = (
+				CC755A2429F450F600A767F3 /* OrderData.swift */,
+				CC755A2029F44E5D00A767F3 /* DeliverPage.swift */,
+				CC755A2229F44F1600A767F3 /* Order.swift */,
+				CC755A2929F4566A00A767F3 /* OrderInteract.swift */,
+			);
+			path = "Orders Page";
+			sourceTree = "<group>";
+		};
+		CC755A2829F4563F00A767F3 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				CC755A1C29F437A600A767F3 /* SignInBottom.swift */,
+				CC755A1A29F436A000A767F3 /* LogIn.swift */,
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		CC755A2C29F457BC00A767F3 /* Make Order */ = {
+			isa = PBXGroup;
+			children = (
+				CC755A3129F458FE00A767F3 /* Restaurant List.swift */,
+				CC755A2F29F4587B00A767F3 /* Restaurant Icon.swift */,
+				CC755A3329F4598200A767F3 /* Restaurant Menu.swift */,
+				CC755A3529F459A700A767F3 /* Food Item.swift */,
+			);
+			path = "Make Order";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +199,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC4D6F4029F3883400A31738 /* ContentView.swift in Sources */,
+				CC755A1F29F4438500A767F3 /* Profile.swift in Sources */,
+				CC755A2A29F4566A00A767F3 /* OrderInteract.swift in Sources */,
+				CC755A2129F44E5D00A767F3 /* DeliverPage.swift in Sources */,
+				CC755A3029F4587B00A767F3 /* Restaurant Icon.swift in Sources */,
 				CC4D6F3E29F3883400A31738 /* diceApp.swift in Sources */,
+				CC755A3429F4598200A767F3 /* Restaurant Menu.swift in Sources */,
 				CC755A1B29F436A000A767F3 /* LogIn.swift in Sources */,
+				CC755A2529F450F600A767F3 /* OrderData.swift in Sources */,
 				CC755A1D29F437A600A767F3 /* SignInBottom.swift in Sources */,
+				CC755A2329F44F1600A767F3 /* Order.swift in Sources */,
+				CC755A3229F458FE00A767F3 /* Restaurant List.swift in Sources */,
+				CC755A3629F459A700A767F3 /* Food Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

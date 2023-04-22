@@ -24,13 +24,17 @@ struct ContentView: View {
             }
         case "Home":
                 TabView{
-                    SecondView()
+                    DeliverPage()
                         .tabItem{
-                            Label("Second", systemImage: "tray.and.arrow.down.fill")
+                            Label("Deliver", systemImage: "takeoutbag.and.cup.and.straw.fill")
                         }
-                    ThirdView()
+                    Restaurant_List()
                         .tabItem{
-                            Label("Third", systemImage: "tray.and.arrow.down.fill")
+                            Label("Order", systemImage: "fork.knife.circle.fill")
+                        }
+                    Profile(SignedIn: $SignedIn)
+                        .tabItem{
+                            Label("Profile", systemImage: "person.crop.circle.fill")
                         }
                 }
         case "Create Account":
@@ -53,22 +57,6 @@ struct SignIn: View{
                 .ignoresSafeArea()
             SignInBottom(SignedIn: $SignedIn)
                 .offset(y: -60)
-        }
-    }
-}
-
-struct SecondView: View {
-    var body: some View {
-        VStack{
-            VStack {
-                Text("This is the second view")
-            }
-            NavigationView{
-                NavigationLink(destination: FourthView()) { Text("Go to fourth") }
-                    .frame(width: 100.0, height: 100.0)
-            }
-            .padding(0.0)
-            .frame(width: 400.0, height: 200.0)
         }
     }
 }

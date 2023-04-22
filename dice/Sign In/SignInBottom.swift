@@ -19,7 +19,7 @@ struct SignInBottom: View {
                 Spacer()
                     .frame(height: 20.0)
                 Circle()
-                    .fill(Color.red)
+                    .fill(Color.brown)
                     .frame(width: 100.0, height: 100.0)
                 Text("Welcome to Slobbin!")
                 Text("Sign in and start ordering")
