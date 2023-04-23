@@ -53,6 +53,6 @@ struct Restaurant_Icon: View {
 
 struct Restaurant_Icon_Previews: PreviewProvider {
     static var previews: some View {
-        Restaurant_Icon(image: "the-study", name: "The Study")
+        Restaurant_Icon(userEmail: .constant("test"), image: "the-study", name: "The Study")
     }
 }

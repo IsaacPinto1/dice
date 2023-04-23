@@ -10,6 +10,7 @@ import SwiftUI
 struct Sandwich: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var dataManager: DataManager
+    @Binding var userEmail: String
     
     @State private var meat = "Ham"
     let meats = ["Steak", "Ham", "Bacon"]
@@ -57,7 +58,7 @@ struct Sandwich: View {
                 .padding(.bottom, 19.0)
             
             Button("Place Order"){
-                dataManager.addOrder(email: <#T##String#>, location: <#T##String#>, itemname: <#T##String#>)
+                dataManager.addOrder(email: userEmail, location: "The Study", itemname: "Custom Sandwich")
                 dismiss()
             }
         }
@@ -66,6 +67,6 @@ struct Sandwich: View {
 
 struct Sandwich_Previews: PreviewProvider {
     static var previews: some View {
-        Sandwich()
+        Sandwich(userEmail: .constant("test"))
     }
 }

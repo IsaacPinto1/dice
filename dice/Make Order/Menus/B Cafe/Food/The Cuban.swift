@@ -9,11 +9,12 @@ import SwiftUI
 
 struct The_Cuban: View {
     @EnvironmentObject var dataManager: DataManager
+    @Binding var userEmail:String
 
     @Environment(\.dismiss) private var dismiss
     var body: some View {
         Button("Place Order"){
-            print("Order placed")
+            dataManager.addOrder(email: userEmail, location: "Bruin Cafe", itemname: "The Cuban")
             dismiss()
         }
     }
@@ -21,6 +22,6 @@ struct The_Cuban: View {
 
 struct The_Cuban_Previews: PreviewProvider {
     static var previews: some View {
-        The_Cuban()
+        The_Cuban(userEmail: .constant("test"))
     }
 }

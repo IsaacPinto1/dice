@@ -45,7 +45,7 @@ class DataManager: ObservableObject{
     
     func addOrder(email: String, location: String, itemname: String){
         let db = Firestore.firestore()
-        let ref = db.collection("Orders").document(email)
+        let ref = db.collection("Orders").document()
         ref.setData(["email": email, "location": location, "itemname": itemname]){ error in
             if let error = error{
                 print(error.localizedDescription)

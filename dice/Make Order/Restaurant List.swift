@@ -21,14 +21,14 @@ struct Restaurant_List: View {
             Divider()
             Spacer()
             HStack{
-                Restaurant_Icon(image:"the-study", name: "The Study", userEmail: $userEmail)
+                Restaurant_Icon(userEmail: $userEmail, image:"the-study", name: "The Study")
                     .padding(.trailing, 50)
                     .environmentObject(dataManager)
-                Restaurant_Icon(image:"rendez", name: "Rendezvous West", userEmail: $userEmail)
+                Restaurant_Icon(userEmail: $userEmail, image:"rendez", name: "Rendezvous West")
             }
                 .padding(.bottom, 50.0)
             HStack{
-                Restaurant_Icon(image:"bcafe", name: "Bruin Cafe", userEmail: $userEmail)
+                Restaurant_Icon(userEmail: $userEmail, image:"bcafe", name: "Bruin Cafe")
             }
             Spacer()
         }
@@ -37,6 +37,6 @@ struct Restaurant_List: View {
 
 struct Restaurant_List_Previews: PreviewProvider {
     static var previews: some View {
-        Restaurant_List()
+        Restaurant_List(userEmail: .constant("test"))
     }
 }

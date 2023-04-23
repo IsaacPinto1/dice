@@ -12,12 +12,12 @@ struct Rendez: View {
     @Binding var userEmail: String
     
     @EnvironmentObject var dataManager: DataManager
+    
     var body: some View {
         NavigationView{
             VStack{
-                NavigationLink(destination: Bowl()) {
-                    Food_Item(image: "bowl", name: "Custom Bowl", userEmail: $userEmail)
-                        .environmentObject(dataManager)
+                NavigationLink(destination: Bowl(userEmail: $userEmail).environmentObject(dataManager)) {
+                    Food_Item(image: "bowl", name: "Custom Bowl")
                 }
             }
         }
@@ -26,6 +26,6 @@ struct Rendez: View {
 
 struct Rendez_Previews: PreviewProvider {
     static var previews: some View {
-        Rendez()
+        Rendez(userEmail: .constant("test"))
     }
 }

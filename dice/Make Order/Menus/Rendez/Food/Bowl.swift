@@ -10,6 +10,7 @@ import SwiftUI
 struct Bowl: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var dataManager: DataManager
+    @Binding var userEmail: String
     
     @State private var meat = "Chicken"
     let meats = ["Chicken", "Steak"]
@@ -44,7 +45,7 @@ struct Bowl: View {
                 .padding(.bottom, 19.0)
             
             Button("Place Order"){
-                print("Order placed")
+                dataManager.addOrder(email: userEmail, location: "Rendezvous West", itemname: "Bowl")
                 dismiss()
             }
         }
@@ -53,6 +54,6 @@ struct Bowl: View {
 
 struct Bowl_Previews: PreviewProvider {
     static var previews: some View {
-        Bowl()
+        Bowl(userEmail: .constant("test"))
     }
 }

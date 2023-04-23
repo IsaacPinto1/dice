@@ -10,13 +10,13 @@ import SwiftUI
 struct B_Cafe: View {
     
     @EnvironmentObject var dataManager: DataManager
+    @Binding var userEmail: String
     
     var body: some View {
         NavigationView{
             VStack{
-                NavigationLink(destination: The_Cuban()) {
-                    Food_Item(image: "cuban", name: "The Cuban", userEmail: $userEmail)
-                        .environmentObject(dataManager)
+                NavigationLink(destination: The_Cuban(userEmail: $userEmail).environmentObject(dataManager)) {
+                    Food_Item(image: "cuban", name: "The Cuban")
                 }
             }
         }
@@ -25,6 +25,6 @@ struct B_Cafe: View {
 
 struct B_Cafe_Previews: PreviewProvider {
     static var previews: some View {
-        B_Cafe()
+        B_Cafe(userEmail: .constant("test"))
     }
 }
