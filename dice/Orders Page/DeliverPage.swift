@@ -11,9 +11,7 @@ struct DeliverPage: View {
     @EnvironmentObject var dataManager: DataManager
     @State var shouldPresentSheet: Bool = false
     
-    func test () {
-        shouldPresentSheet.toggle()
-    }
+    
     
     var body: some View {
         VStack{
@@ -23,17 +21,37 @@ struct DeliverPage: View {
             .font(.system(size:36))
             Divider()
             NavigationView{
-                List(dataManager.orders, id: \.email){ order in
-//                    Text("\(order.email) wants \(order.itemname) from \(order.location)")
-                    Button ("\(order.email) wants a \(order.itemname) from \(order.location)", action: test)
-                        .sheet(isPresented: $shouldPresentSheet) {
-                    } content: {
-                        OrderInteract(orderData: OrderData(email: order.email, itemname: order.itemname, location: order.location), sheet: $shouldPresentSheet)
-                    }
+                List(dataManager.orders, id: \.ID){ order in
+                    OrderButton(order: order)
+                        .environmentObject(dataManager)
                 }
             }
+            Button{
+                dataManager.fetchOrders()
+            } label: {
+                Text("Refresh")
+            }
             Spacer()
-            
+        }
+    }
+}
+
+struct OrderButton: View{
+    @EnvironmentObject var dataManager: DataManager
+    
+    @State var display: Bool = false
+    var order: OrderData
+    
+    func test(){
+        display.toggle()
+    }
+    
+    var body: some View{
+        Button ("\(order.email) wants a \(order.itemname) from \(order.location)", action: test)
+            .sheet(isPresented: $display) {
+        } content: {
+            OrderInteract(orderData: OrderData(email: order.email, itemname: order.itemname, location: order.location, ID: order.ID), sheet: $display)
+                .environmentObject(dataManager)
         }
     }
 }

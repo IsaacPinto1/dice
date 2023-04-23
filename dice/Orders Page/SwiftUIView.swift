@@ -31,11 +31,12 @@ class DataManager: ObservableObject{
                 for document in snapshot.documents{
                     let data = document.data()
                     
+                    let id = document.documentID
                     let email = data["email"] as? String ?? ""
                     let itemname = data["itemname"] as? String ?? ""
                     let location = data["location"] as? String ?? ""
                     
-                    let order = OrderData(email: email, itemname: itemname, location: location)
+                    let order = OrderData(email: email, itemname: itemname, location: location, ID: id)
                     self.orders.append(order)
                 }
             }
@@ -49,6 +50,18 @@ class DataManager: ObservableObject{
         ref.setData(["email": email, "location": location, "itemname": itemname]){ error in
             if let error = error{
                 print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func removeOrder(ID: String){
+        print(ID)
+        let db = Firestore.firestore()
+        db.collection("Orders").document(ID).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
             }
         }
     }
