@@ -11,6 +11,8 @@ import Firebase
 @main
 struct diceApp: App {
     
+    @StateObject var dataManager = DataManager()
+    
     init(){
         FirebaseApp.configure()
     }
@@ -18,6 +20,7 @@ struct diceApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(dataManager)
         }
     }
 }

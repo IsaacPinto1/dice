@@ -9,12 +9,12 @@ import SwiftUI
 
 struct OrderInteract: View {
     
-    @Binding var orderData: OrderData
+    var orderData: OrderData
     @Binding var sheet: Bool
     
     var body: some View {
         VStack{
-            Text("\(orderData.name) has ordered \(orderData.food)")
+            Text("\(orderData.email) has ordered \(orderData.itemname) from \(orderData.location)")
             HStack{
                 Button("Accept"){
                     print("order accepted")
@@ -31,6 +31,6 @@ struct OrderInteract: View {
 
 struct OrderInteract_Previews: PreviewProvider {
     static var previews: some View {
-        OrderInteract(orderData: .constant(OrderData(name: "Isaac", food: "burrito")), sheet: .constant(true))
+        OrderInteract(orderData: OrderData(email: "Isaac", itemname: "burrito", location: "rendez"), sheet: .constant(true))
     }
 }

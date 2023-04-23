@@ -14,12 +14,12 @@
 		CC51EC3529F4B8EE00AE9265 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CC51EC3429F4B8EE00AE9265 /* FirebaseAuth */; };
 		CC51EC3729F4B8EE00AE9265 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CC51EC3629F4B8EE00AE9265 /* FirebaseFirestore */; };
 		CC51EC3929F4B94A00AE9265 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC51EC3829F4B94A00AE9265 /* GoogleService-Info.plist */; };
+		CC51EC3B29F4C85500AE9265 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51EC3A29F4C85500AE9265 /* SwiftUIView.swift */; };
 		CC755A1729F3D5EE00A767F3 /* Dice-starter-assets in Resources */ = {isa = PBXBuildFile; fileRef = CC755A1629F3D5EE00A767F3 /* Dice-starter-assets */; };
 		CC755A1B29F436A000A767F3 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A1A29F436A000A767F3 /* LogIn.swift */; };
 		CC755A1D29F437A600A767F3 /* SignInBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A1C29F437A600A767F3 /* SignInBottom.swift */; };
 		CC755A1F29F4438500A767F3 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A1E29F4438500A767F3 /* Profile.swift */; };
 		CC755A2129F44E5D00A767F3 /* DeliverPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A2029F44E5D00A767F3 /* DeliverPage.swift */; };
-		CC755A2329F44F1600A767F3 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A2229F44F1600A767F3 /* Order.swift */; };
 		CC755A2529F450F600A767F3 /* OrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A2429F450F600A767F3 /* OrderData.swift */; };
 		CC755A2A29F4566A00A767F3 /* OrderInteract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A2929F4566A00A767F3 /* OrderInteract.swift */; };
 		CC755A3029F4587B00A767F3 /* Restaurant Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC755A2F29F4587B00A767F3 /* Restaurant Icon.swift */; };
@@ -40,12 +40,12 @@
 		CC4D6F4129F3883500A31738 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC4D6F4429F3883500A31738 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC51EC3829F4B94A00AE9265 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CC51EC3A29F4C85500AE9265 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		CC755A1629F3D5EE00A767F3 /* Dice-starter-assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Dice-starter-assets"; sourceTree = "<group>"; };
 		CC755A1A29F436A000A767F3 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		CC755A1C29F437A600A767F3 /* SignInBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInBottom.swift; sourceTree = "<group>"; };
 		CC755A1E29F4438500A767F3 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		CC755A2029F44E5D00A767F3 /* DeliverPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverPage.swift; sourceTree = "<group>"; };
-		CC755A2229F44F1600A767F3 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		CC755A2429F450F600A767F3 /* OrderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderData.swift; sourceTree = "<group>"; };
 		CC755A2929F4566A00A767F3 /* OrderInteract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInteract.swift; sourceTree = "<group>"; };
 		CC755A2F29F4587B00A767F3 /* Restaurant Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant Icon.swift"; sourceTree = "<group>"; };
@@ -117,8 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				CC755A2429F450F600A767F3 /* OrderData.swift */,
+				CC51EC3A29F4C85500AE9265 /* SwiftUIView.swift */,
 				CC755A2029F44E5D00A767F3 /* DeliverPage.swift */,
-				CC755A2229F44F1600A767F3 /* Order.swift */,
 				CC755A2929F4566A00A767F3 /* OrderInteract.swift */,
 			);
 			path = "Orders Page";
@@ -293,11 +293,11 @@
 				CCF83F2929F475C6006A6EEC /* Rendez.swift in Sources */,
 				CC755A3029F4587B00A767F3 /* Restaurant Icon.swift in Sources */,
 				CCF83F3629F47CD8006A6EEC /* Sandwich.swift in Sources */,
+				CC51EC3B29F4C85500AE9265 /* SwiftUIView.swift in Sources */,
 				CC4D6F3E29F3883400A31738 /* diceApp.swift in Sources */,
 				CC755A1B29F436A000A767F3 /* LogIn.swift in Sources */,
 				CC755A2529F450F600A767F3 /* OrderData.swift in Sources */,
 				CC755A1D29F437A600A767F3 /* SignInBottom.swift in Sources */,
-				CC755A2329F44F1600A767F3 /* Order.swift in Sources */,
 				CC755A3229F458FE00A767F3 /* Restaurant List.swift in Sources */,
 				CCF83F2529F472EE006A6EEC /* B Cafe.swift in Sources */,
 				CC755A3629F459A700A767F3 /* Food Item.swift in Sources */,

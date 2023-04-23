@@ -10,6 +10,9 @@ import SwiftUI
 struct ContentView: View {
     
     @State var SignedIn = "Sign In"
+    @State var userEmail = ""
+    
+    @EnvironmentObject var dataManager: DataManager
     
     func changeSignIn(){
         SignedIn = "Home"
@@ -20,7 +23,7 @@ struct ContentView: View {
         switch SignedIn {
         case "Sign In":
             VStack{
-                SignIn(SignedIn: $SignedIn)
+                SignIn(SignedIn: $SignedIn, userEmail: $userEmail)
             }
         case "Home":
                 TabView{
@@ -28,11 +31,13 @@ struct ContentView: View {
                         .tabItem{
                             Label("Deliver", systemImage: "takeoutbag.and.cup.and.straw.fill")
                         }
-                    Restaurant_List()
+                        .environmentObject(dataManager)
+                    Restaurant_List(userEmail: $userEmail)
                         .tabItem{
                             Label("Order", systemImage: "fork.knife.circle.fill")
                         }
-                    Profile(SignedIn: $SignedIn)
+                        .environmentObject(dataManager)
+                    Profile(SignedIn: $SignedIn, userEmail: $userEmail)
                         .tabItem{
                             Label("Profile", systemImage: "person.crop.circle.fill")
                         }
@@ -49,6 +54,7 @@ struct ContentView: View {
 struct SignIn: View{
     
     @Binding var SignedIn: String
+    @Binding var userEmail: String
     
     var body: some View{
         ZStack{
@@ -56,7 +62,7 @@ struct SignIn: View{
                 .fill(.green)
                 .ignoresSafeArea()
             VStack{
-                SignInBottom(SignedIn: $SignedIn)
+                SignInBottom(SignedIn: $SignedIn, userEmail: $userEmail)
             }
             .padding(.top, 235.0)
         }

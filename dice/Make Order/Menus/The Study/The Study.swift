@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct The_Study: View {
+    @EnvironmentObject var dataManager: DataManager
+    
     var body: some View {
         NavigationView{
             VStack{
                 NavigationLink(destination: Sandwich()) {
-                    Food_Item(image: "studysand", name: "Custom Sandwich")
+                    Food_Item(image: "studysand", name: "Custom Sandwich", userEmail: $userEmail)
+                        .environmentObject(dataManager)
                 }
             }
         }

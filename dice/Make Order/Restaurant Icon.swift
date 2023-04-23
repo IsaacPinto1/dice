@@ -9,6 +9,9 @@ import SwiftUI
 
 struct Restaurant_Icon: View {
     
+    @EnvironmentObject var dataManager: DataManager
+    @Binding var userEmail: String
+    
     @State var shouldPresentSheet = false
     var image: String
     var name: String
@@ -28,13 +31,17 @@ struct Restaurant_Icon: View {
             } content: {
                 switch name {
                 case "Bruin Cafe":
-                    B_Cafe()
+                    B_Cafe(userEmail: $userEmail)
+                        .environmentObject(dataManager)
                 case "The Study":
-                    The_Study()
+                    The_Study(userEmail: $userEmail)
+                        .environmentObject(dataManager)
                 case "Rendezvous West":
-                    Rendez()
+                    Rendez(userEmail: $userEmail)
+                        .environmentObject(dataManager)
                 default:
-                    B_Cafe()
+                    B_Cafe(userEmail: $userEmail)
+                        .environmentObject(dataManager)
                 }
             }
             Text(name)

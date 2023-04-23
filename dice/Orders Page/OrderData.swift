@@ -9,6 +9,8 @@ import Foundation
 
 
 struct OrderData{
-    let name: String
-    let food: String
+    let email: String
+    let itemname: String
+    let location: String
+    
 }

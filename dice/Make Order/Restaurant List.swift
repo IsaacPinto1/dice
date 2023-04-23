@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct Restaurant_List: View {
+    
+    @EnvironmentObject var dataManager: DataManager
+    @Binding var userEmail: String
+    
     var body: some View {
         VStack{
             Text("Choose a Restaurant: ")
@@ -17,13 +21,14 @@ struct Restaurant_List: View {
             Divider()
             Spacer()
             HStack{
-                Restaurant_Icon(image:"the-study", name: "The Study")
+                Restaurant_Icon(image:"the-study", name: "The Study", userEmail: $userEmail)
                     .padding(.trailing, 50)
-                Restaurant_Icon(image:"rendez", name: "Rendezvous West")
+                    .environmentObject(dataManager)
+                Restaurant_Icon(image:"rendez", name: "Rendezvous West", userEmail: $userEmail)
             }
                 .padding(.bottom, 50.0)
             HStack{
-                Restaurant_Icon(image:"bcafe", name: "Bruin Cafe")
+                Restaurant_Icon(image:"bcafe", name: "Bruin Cafe", userEmail: $userEmail)
             }
             Spacer()
         }

@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct DeliverPage: View {
+    @EnvironmentObject var dataManager: DataManager
+    @State var shouldPresentSheet: Bool = false
     
-    @State var order = OrderData(name: "Isaac", food: "Burrito")
-    @State var order1 = OrderData(name: "Jeff", food: "Meat")
+    func test () {
+        shouldPresentSheet.toggle()
+    }
     
     var body: some View {
         VStack{
@@ -19,24 +22,14 @@ struct DeliverPage: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .font(.system(size:36))
             Divider()
-            ScrollView{
-                Group{
-                    Order(orderData: $order)
-                    Order(orderData: $order1)
-                    Order(orderData: $order)
-                    Order(orderData: $order)
-                    Order(orderData: $order1)
-                    Order(orderData: $order)
-                    Order(orderData: $order)
-                }
-                Group{
-                    Order(orderData: $order)
-                    Order(orderData: $order)
-                    Order(orderData: $order)
-                    Order(orderData: $order)
-                    Order(orderData: $order)
-                    Order(orderData: $order)
-                    Order(orderData: $order)
+            NavigationView{
+                List(dataManager.orders, id: \.email){ order in
+//                    Text("\(order.email) wants \(order.itemname) from \(order.location)")
+                    Button ("\(order.email) wants a \(order.itemname) from \(order.location)", action: test)
+                        .sheet(isPresented: $shouldPresentSheet) {
+                    } content: {
+                        OrderInteract(orderData: OrderData(email: order.email, itemname: order.itemname, location: order.location), sheet: $shouldPresentSheet)
+                    }
                 }
             }
             Spacer()

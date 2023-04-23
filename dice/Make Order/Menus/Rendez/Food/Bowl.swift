@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Bowl: View {
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var dataManager: DataManager
     
     @State private var meat = "Chicken"
     let meats = ["Chicken", "Steak"]

@@ -11,11 +11,13 @@ import Firebase
 struct Profile: View {
     
     @Binding var SignedIn: String
+    @Binding var userEmail: String
+    
+    
     
     var body: some View {
         VStack{
-            Text("Name: Username")
-            Text("Email: Email")
+            Text("Email: \(userEmail)")
             Button("Sign Out") {
                 SignedIn = "Sign In"
                 signOut()
@@ -35,6 +37,6 @@ struct Profile: View {
 
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {
-        Profile(SignedIn: .constant("Home"))
+        Profile(SignedIn: .constant("Home"), userEmail: .constant("qert"))
     }
 }

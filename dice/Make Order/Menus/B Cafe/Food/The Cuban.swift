@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct The_Cuban: View {
+    @EnvironmentObject var dataManager: DataManager
 
     @Environment(\.dismiss) private var dismiss
     var body: some View {

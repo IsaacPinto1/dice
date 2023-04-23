@@ -14,6 +14,7 @@ struct SignInBottom: View {
     @State private var password = ""
     
     @Binding var SignedIn: String
+    @Binding var userEmail: String
     
     var body: some View {
         ZStack(){
@@ -69,6 +70,7 @@ struct SignInBottom: View {
             Auth.auth().addStateDidChangeListener {auth, user in if user != nil{
                 print("test")
                 SignedIn = "Home"
+                userEmail = (user?.email)!
             }
             }
         }
@@ -92,6 +94,6 @@ struct SignInBottom: View {
 
 struct SignInBottom_Previews: PreviewProvider {
     static var previews: some View {
-        SignInBottom(SignedIn: .constant(""))
+        SignInBottom(SignedIn: .constant(""), userEmail: .constant("ert"))
     }
 }
