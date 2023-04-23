@@ -23,9 +23,9 @@ struct SignInBottom: View {
                 .frame(height:650)
             VStack(){
                 Circle()
-                    .fill(Color.brown)
+                    .fill(Color.green)
                     .frame(width: 100.0, height: 100.0)
-                Text("Welcome to Slobbin!")
+                Text("Welcome to Dice!")
                     .foregroundColor(.black)
                 Text("Sign in and start ordering")
                     .foregroundColor(.black)
