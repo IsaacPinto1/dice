@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SignInBottom: View {
+    
+    @State private var email = ""
+    @State private var password = ""
     
     @Binding var SignedIn: String
     
@@ -15,19 +19,20 @@ struct SignInBottom: View {
         ZStack(){
             RoundedRectangle(cornerRadius: 40)
                 .fill(.white)
+                .frame(height:650)
             VStack(){
-                Spacer()
-                    .frame(height: 20.0)
                 Circle()
                     .fill(Color.brown)
                     .frame(width: 100.0, height: 100.0)
                 Text("Welcome to Slobbin!")
+                    .foregroundColor(.black)
                 Text("Sign in and start ordering")
+                    .foregroundColor(.black)
                     .padding(.bottom, 19.0)
                 Text("Email")
                     .padding(.leading, 15.0)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                TextField("example@example.com", text: $email)
                     .padding(30)
                     .overlay( RoundedRectangle(cornerRadius: 20)
                         .strokeBorder(.black, lineWidth: 3)
@@ -36,7 +41,7 @@ struct SignInBottom: View {
                 Text("Password")
                     .padding(.leading, 15.0)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                SecureField("Password", text: $password)
                     .padding(.all, 30)
                     .overlay( RoundedRectangle(cornerRadius: 20)
                         .strokeBorder(.black, lineWidth: 3)
@@ -44,15 +49,15 @@ struct SignInBottom: View {
                     .frame( height: 100)
                 Button("Sign In") {
                     print("Signed in")
-                    SignedIn = "Home"
+                    login()
                 }
                 .frame(width: 300, height: 50)
                 .overlay( RoundedRectangle(cornerRadius: 20)
                     .strokeBorder(.black, lineWidth: 3)
                     .padding(.horizontal, 10))
                 Button("Create Account") {
-                    print("Signed in")
-                    SignedIn = "Create Account"
+                    print("Account Created")
+                    register()
                 }
                 .frame(width: 300, height: 50)
                 .overlay( RoundedRectangle(cornerRadius: 20)
@@ -60,7 +65,29 @@ struct SignInBottom: View {
                     .padding(.horizontal, 10))
             }
         }
+        .onAppear(){
+            Auth.auth().addStateDidChangeListener {auth, user in if user != nil{
+                print("test")
+                SignedIn = "Home"
+            }
+            }
+        }
     }
+    func register(){
+        Auth.auth().createUser(withEmail: email, password: password){result, error in if error != nil{
+            print(error!.localizedDescription)
+        }
+        }
+    }
+    
+    func login(){
+        Auth.auth().signIn(withEmail: email, password: password){result, error in if error != nil{
+            print(error!.localizedDescription)
+        }
+        }
+    }
+    
+    
 }
 
 struct SignInBottom_Previews: PreviewProvider {

@@ -51,12 +51,14 @@ struct SignIn: View{
     @Binding var SignedIn: String
     
     var body: some View{
-        VStack{
+        ZStack{
             Rectangle()
                 .fill(.green)
                 .ignoresSafeArea()
-            SignInBottom(SignedIn: $SignedIn)
-                .offset(y: -60)
+            VStack{
+                SignInBottom(SignedIn: $SignedIn)
+            }
+            .padding(.top, 235.0)
         }
     }
 }

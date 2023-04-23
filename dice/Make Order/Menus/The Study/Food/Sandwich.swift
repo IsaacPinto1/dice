@@ -13,8 +13,8 @@ struct Sandwich: View {
     @State private var meat = "Ham"
     let meats = ["Steak", "Ham", "Bacon"]
     
-    @State private var veg1 = "Brown"
-    @State private var veg2 = "Brown"
+    @State private var veg1 = "Tomatoes"
+    @State private var veg2 = "None"
     let veggies = ["Tomatoes", "Red Onion", "Lecttuce", "Olives", "None"]
 
     var body: some View {

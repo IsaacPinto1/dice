@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct Profile: View {
     
@@ -17,7 +18,17 @@ struct Profile: View {
             Text("Email: Email")
             Button("Sign Out") {
                 SignedIn = "Sign In"
+                signOut()
             }
+        }
+    }
+    
+    func signOut(){
+        do {
+            try Auth.auth().signOut()
+        }
+        catch {
+            print("Nope!")
         }
     }
 }
